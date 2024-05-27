@@ -50,7 +50,7 @@ const NotesList = ({ setSeeNote }) => {
                         </div>
                     </div>
                 )) : (
-                    <p className='text-sm sm:text-base'>Belum ada catatan.</p>
+                    <p className='text-sm text-muted-foreground sm:text-base'>Belum ada catatan.</p>
                 )}
             </ScrollArea>
         </div>
