@@ -31,7 +31,7 @@ const NoteForm = () => {
             .refine(value => value.trim().length > 0, { message: "Title Note tidak boleh kosong." }),
         text: z.string()
             .min(1, { message: "Text Note minimal 1 karakter." })
-            .max(250, { message: "Text Note tidak boleh lebih dari 250 karakter." })
+            .max(750, { message: "Text Note tidak boleh lebih dari 750 karakter." })
             .refine(value => value.trim().length > 0, { message: "Text Note tidak boleh kosong." }),
     })
 
