@@ -19,7 +19,7 @@ const NotesList = ({ setSeeNote }) => {
     return (
         <div className="h-full overflow-hidden">
             <ScrollArea className="h-full grid gap-4">
-                {notes && notes.map((v, i) => (
+                {notes.length > 0 ? notes.map((v, i) => (
                     <div
                         key={i}
                         className="cursor-pointer flex items-start gap-4 rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -49,7 +49,9 @@ const NotesList = ({ setSeeNote }) => {
                             </p>
                         </div>
                     </div>
-                ))}
+                )) : (
+                    <p className='text-sm sm:text-base'>Belum ada catatan.</p>
+                )}
             </ScrollArea>
         </div>
     )
